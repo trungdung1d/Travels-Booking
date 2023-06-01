@@ -23,7 +23,7 @@ const tourSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    desc: {
+    description: {
       type: String,
       required: true,
     },
@@ -31,7 +31,7 @@ const tourSchema = new mongoose.Schema(
       type: Number,
       required: true,
     },
-    maxGroupSize: {
+    maxPeople: {
       type: Number,
       required: true,
     },
