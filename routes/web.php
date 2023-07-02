@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Route;
 | routes are loaded by the RouteServiceProvider and all of them will
 | be assigned to the "web" middleware group. Make something great!
 |
-*/
+
 /*Destination*/
 Route::get('/add-destination','App\Http\Controllers\DestinationController@index');
 Route::post('/save-destination','App\Http\Controllers\DestinationController@add');
