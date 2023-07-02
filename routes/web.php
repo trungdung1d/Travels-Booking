@@ -22,6 +22,27 @@ Route::get('/delete-destination/{destination_id}','App\Http\Controllers\Destinat
 Route::get('/enable-destination/{destination_id}','App\Http\Controllers\DestinationController@enable');
 Route::get('/disable-destination/{destination_id}','App\Http\Controllers\DestinationController@disable');
 /*.........................................................................................................................*/
+/*Booking*/
+Route::get('/list-booking/{status}','App\Http\Controllers\BookingController@show_list');
+Route::get('/details-booking/{booking_id}','App\Http\Controllers\BookingController@detail');
+Route::post('/update-booking','App\Http\Controllers\BookingController@update');
+/*.........................................................................................................................*/
+/*Staff*/
+Route::get('/add-staff','App\Http\Controllers\StaffController@add_staff');
+Route::post('/save-staff','App\Http\Controllers\StaffController@save_staff');
+Route::get('/list-staff/{position_id}','App\Http\Controllers\StaffController@show_list');
+Route::get('/edit-staff/{staff_id}','App\Http\Controllers\StaffController@edit_staff');
+Route::post('/update-staff/{staff_id}','App\Http\Controllers\StaffController@update_staff');
+Route::get('delete-staff/{staff_id}','App\Http\Controllers\StaffController@delete_staff');
+/*.........................................................................................................................*/
+/*Contracts*/
+Route::get('/new-contract','App\Http\Controllers\ContractController@new_contract');
+Route::post('/add-contract','App\Http\Controllers\ContractController@add_contract');
+Route::post('/save-contract','App\Http\Controllers\ContractController@save_contract');
+Route::get('/list-contract/{contract_status}','App\Http\Controllers\ContractController@list_contract');
+Route::get('/detail-contract/{contract_id}','App\Http\Controllers\ContractController@detail_contract');
+Route::post('/update-contract','App\Http\Controllers\ContractController@update');
+/*.........................................................................................................................*/
 /*Type tour*/
 Route::get('/add-type-tour','App\Http\Controllers\TypetourController@index');
 Route::post('/save-type-tour','App\Http\Controllers\TypetourController@add');
