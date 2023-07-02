@@ -41,6 +41,21 @@ Route::get('edit-tour/{tour_id}','App\Http\Controllers\TourController@edit');
 Route::post('update-tour/{tour_id}','App\Http\Controllers\TourController@update');
 /*.........................................................................................................................*/
 
+/*Login customer*/
+Route::get('/login-index','App\Http\Controllers\CustomerController@login_index');
+Route::post('/login-customer','App\Http\Controllers\CustomerController@login_customer');
+Route::get('register-index','App\Http\Controllers\CustomerController@register_index');
+Route::post('add-customer','App\Http\Controllers\CustomerController@add_customer');
+Route::get('profile','App\Http\Controllers\CustomerController@profile')->name('profile');
+Route::post('/update-profile/{customer_id}','App\Http\Controllers\CustomerController@update_profile');
+Route::get('order/{customer_id}','App\Http\Controllers\CustomerController@order');
+Route::get('logout-customer','App\Http\Controllers\CustomerController@logout');
+/*Login admin*/
+Route::post('login-admin','App\Http\Controllers\LoginController@login');
+Route::get('admin','App\Http\Controllers\LoginController@index');
+Route::get('logout','App\Http\Controllers\LoginController@logout');
+
+
 /* Route::get('/contact',function (){
     return view('Page_Views.ContactPage');
 }); */
@@ -48,3 +63,4 @@ Route::get('/contact','App\Http\Controllers\HomeController@contact');
 
 Route::group(['middleware'=>['web']],function (){
     Route::get('language/{language}','App\Http\Controllers\LanguageController@index')->name('language');});
+
