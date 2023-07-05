@@ -19,8 +19,8 @@ COPY .env.example .env
 # Cài đặt composer để quản lý các phụ thuộc PHP
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-# Chạy composer install để cài đặt các phụ thuộc Laravel
-RUN composer install
+# Chạy composer update để cài đặt và cập nhật các phụ thuộc Laravel
+RUN composer update
 
 # Tạo key mới cho ứng dụng Laravel
 RUN php artisan key:generate
