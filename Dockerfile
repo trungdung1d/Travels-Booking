@@ -17,13 +17,13 @@ WORKDIR /var/www/html
 COPY .env.example .env
 
 # Cài đặt composer để quản lý các phụ thuộc PHP
-RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+#RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 # Chạy composer update để cài đặt và cập nhật các phụ thuộc Laravel
-RUN composer update
+#RUN composer update
 
 # Tạo key mới cho ứng dụng Laravel
-RUN php artisan server
+#RUN php artisan server
 
 # Mở cổng 80 để Apache lắng nghe
 EXPOSE 80
