@@ -8,7 +8,7 @@ on:
 env:
   DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
   DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-  IMAGE_NAME: trungdung1d/travels-booking
+  IMAGE_NAME: tuzuka/laravel-app2
   TAG: latest
 
 jobs:
@@ -32,7 +32,7 @@ jobs:
           password: ${{ env.DOCKER_PASSWORD }}
 
       - name: Build and Push Docker image
-        uses: docker/build-push-action@v1
+        uses: docker/build-push-action@v2
         with:
           context: .
           push: true
