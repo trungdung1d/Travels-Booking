@@ -8,7 +8,7 @@ on:
 env:
   DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
   DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-  IMAGE_NAME: tuzuka/laravel-app2
+  IMAGE_NAME: trungdung1d/travels-booking
   TAG: latest
 
 jobs:
