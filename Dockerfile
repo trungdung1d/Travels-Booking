@@ -1,4 +1,3 @@
-
 # Sử dụng PHP image chứa Apache, bạn có thể thay đổi phiên bản PHP tùy chọn tại đây
 FROM php:8.0-apache
 
@@ -18,7 +17,7 @@ WORKDIR /var/www/html
 COPY .env.example .env
 
 # Cài đặt composer để quản lý các phụ thuộc PHP
-RUN curl -ss https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 # Chạy composer install để cài đặt các phụ thuộc Laravel
 RUN composer install
