@@ -3,7 +3,7 @@ name: Auto Build and Push
 on:
   push:
     branches:
-      - master
+      - main
 
 env:
   DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
